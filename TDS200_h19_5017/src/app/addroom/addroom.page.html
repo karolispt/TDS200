@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add meeting room
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-item>
+        <ion-input placeholder="Enter Name" [(ngModel)]="roomName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          placeholder="Enter Number of seats"
+          [(ngModel)]="roomNumber"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          placeholder="Enter Description"
+          [(ngModel)]="roomDescription"
+        ></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button
+          (click)="createRecord()"
+          [disabled]="!roomName || !roomNumber || !roomDescription"
+        >
+          <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+          &nbsp;Add
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

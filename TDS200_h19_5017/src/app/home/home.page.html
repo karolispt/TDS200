@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <p>{{ text }}</p>
+  </div>
+  <img src="../../assets/background/hk.jpg" />
+</ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button>
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Home</ion-label>
+      <ion-badge>6</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/rooms']" routerDirection="backward">
+      <ion-icon name="browsers"></ion-icon>
+      <ion-label>Rooms</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/addroom']" routerDirection="backward">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Add Room</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [routerLink]="['/profile']" routerDirection="backward">
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+''

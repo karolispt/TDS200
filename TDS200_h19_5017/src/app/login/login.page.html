@@ -1,0 +1,37 @@
+<ion-content>
+    <h4 text-center margin-top>Insert your credentials</h4>
+  <div id="login-form">
+    <ion-card class="login-form-field">
+      <ion-card-content>
+        <ion-input [(ngModel)]="user.username" placeholder="Username"> </ion-input>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="login-form-field">
+      <ion-card-content>
+        <ion-input [(ngModel)]="user.password" placeholder="Password" type="password"></ion-input>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="full" color="medium" (click)="logIn()">Login</ion-button>
+    <ion-button expand="full" color="medium" (click)="registerUser()">Register</ion-button>
+    <ion-button expand="full" color="medium" (click)="forgotPassword()">Forgot password</ion-button>
+  </div>
+</ion-content>  
+<!-- <ion-content>
+<h4 text-center margin-top>Insert your credentials</h4>
+  <ion-item>
+    <ion-label stacked>Username</ion-label>
+    <ion-input [(ngModel)]="user.username" placeholder="Username"></ion-input>
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+  </ion-item>
+
+  <div text-center margin-top>
+    <button ion-button margin-right (click)="signUp()">
+      SIGN UP
+    </button>
+    <button ion-button color="secondary" (click)="signIn()">
+      SIGN IN
+    </button>
+  </div>
+</ion-content> -->

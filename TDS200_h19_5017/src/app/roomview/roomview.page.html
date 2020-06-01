@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Room {{room?.Name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/rooms"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-item>
+            <h2 text-minimize>{{ room.Name }} is {{ room.Status }}</h2>
+          </ion-item>
+          <ion-card-content>
+            Description: {{room.Description}}
+            <br />
+            Seats available: {{room.Number}}
+          </ion-card-content>
+          <ion-card-subtitle>
+            Added by: {{room.User}}
+          </ion-card-subtitle>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div id="buttons">
+    <ion-button color="success" expand="block" (click)="updateRecord(room?.Id)"
+      >Book this room</ion-button
+    >
+    <ion-button color="danger" expand="block" (click)="removeRecord(room?.Id)"
+      >Delete this room</ion-button
+    >
+  </div>
+</ion-content>
